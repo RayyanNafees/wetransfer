@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+/*.header {
+    position: scroll;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}*/
+
+body {
+  background-image: url("bg-light.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slideBackground 10s linear infinite;
+}
+
+@keyframes slideBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Additional styles for content */
+/*.content {
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }*/
+
+.wrapper {
+  margin: 10px auto;
+  padding: 0 10%;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+}
+
+h1 {
+  background-color: #333;
+  background-image: linear-gradient(to bottom, #31a86d, #6b7b817e);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  font-size: 45px;
+  padding-bottom: 5px;
+  text-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 100%;
+  backdrop-filter: blur(30px);
+  color: #ffffff;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  margin-top: 50px;
+}
+
+.box {
+  height: 100%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+  height: 70px;
+}
+
+.box h3 {
+  color: #444;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.button {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #333;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.button:hover {
+  letter-spacing: 1px;
+  color: #31a86d;
+}
+.box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.show-less-label {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #333;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.show-less-label:hover {
+  letter-spacing: 1px;
+}
+.box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+#check {
+  display: none;
+}
+
+.content {
+  display: none;
+  transition: 0.5s linear;
+}
+
+.show-less-label {
+  display: none;
+}
+
+#check:checked ~ .content {
+  display: block;
+}
+
+#check:checked ~ label {
+  display: hidden;
+}
+
+#check:checked ~ label:after {
+  /* content:'Show Less'; */
+  display: block;
+  visibility: visible;
+}
+
+#uncheck {
+  display: none;
+}
+
+#uncheck:checked ~ .content {
+  display: block;
+}
+
+#uncheck:checked ~ label {
+  display: hidden;
+}
+
+#uncheck:checked ~ label:after {
+  padding-top: 10px;
+  /*content:'Show Less';*/
+  display: block;
+  visibility: visible;
+}
+
+/* Style for the footer */
+footer {
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #6b7b817e, #31a86d);
+  text-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+  border-top-right-radius: 100%;
+  border-top-left-radius: 30%;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  footer {
+    font-size: 14px;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 30%;
+  }
+}
+
+@media (max-width: 770px) {
+  .wrapper {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 100%;
+  }
+}
